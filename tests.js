@@ -6,7 +6,7 @@ QUnit.test('Add a method called "honk" to Car so that all instances of that func
 
 QUnit.test('Have the "honk" method return the string "beep beep" when called.', function(assert) {
   var car = new Car();
-  assert.equal(car.honk(), "beep beep", 'Should have beed beeped.')
+  assert.equal(car.honk(), "beep beep", 'Should have beep beeped.')
 });
 
 QUnit.test('Change the Car constructor so that it takes two parameters, "make" and "model", and those values can be access through properties', function(assert) {
@@ -35,7 +35,7 @@ QUnit.test('The car should have a function to get the description of the car in 
 
 QUnit.test('The card should have a function called "passengerList" for listing the passengers.', function(assert) {
   var car = new Car('Toyota', 'Tundra');
-  assert.notEqual(car.passengerList, undefined, 'The card does not have a "passengerList" function.');
+  assert.notEqual(car.passengerList, undefined, 'The car does not have a "passengerList" function.');
 });
 
 QUnit.test('If the car has no passengers, the "passengerList" function should return the string "no passengers".', function(assert) {
