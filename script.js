@@ -19,3 +19,24 @@ Car.prototype.addPassenger = function(passenger) {
 Car.prototype.description = function(make, model) {
     return "This is a " + this.make + " " + this.model;
 }
+
+Car.prototype.passengerList = function(passengers) {
+  if (this.passengers === null) {
+    return "no passengers" + this.passengers;
+  }
+  return this.passengers;
+}
+
+function ChevyCar(make, model) {
+  this.make= make;
+  this.model = model;
+  this.passengers = [];
+}
+
+ChevyCar.prototype.breakDown = function() {
+  
+}
+
+ChevyCar.prototype.honk = function() {
+  return "boop boop";
+}
