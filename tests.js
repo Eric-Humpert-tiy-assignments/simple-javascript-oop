@@ -40,13 +40,13 @@ QUnit.test('The card should have a function called "passengerList" for listing t
 
 QUnit.test('If the car has no passengers, the "passengerList" function should return the string "no passengers".', function(assert) {
   var car = new Car('Toyota', 'Tundra');
-  assert.equal(car.passengerList(), 'no passengers', 'The card does not have a "passengerList" function.');
+  assert.equal(car.passengerList(), 'no passengers', 'The car does not have a "passengerList" function.');
 });
 
 QUnit.test('If the car has one passenger, the "passengerList" function should return the name of the passenger.', function(assert) {
   var car = new Car('Toyota', 'Tundra');
   car.addPassenger('Bob');
-  assert.equal(car.passengerList(), 'Bob', 'The card does not have a "passengerList" function.');
+  assert.equal(car.passengerList(), 'Bob', 'The car does not have a "passengerList" function.');
 });
 
 //For this one, it might help to review the section entitled "This & That" in lesson https://online.theironyard.com/paths/158/units/1546/lessons/2796.
@@ -56,7 +56,7 @@ QUnit.test('If the car has two or more passengers, the "passengerList" function 
   car.addPassenger('Bob');
   car.addPassenger('Sue');
   car.addPassenger('George');
-  assert.equal(car.passengerList(), 'Bob, Sue, and George', 'The card does not have a "passengerList" function.');
+  assert.equal(car.passengerList(), 'Bob, Sue, and George', 'The car does not have a "passengerList" function.');
 });
 
 

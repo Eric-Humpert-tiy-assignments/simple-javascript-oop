@@ -10,7 +10,9 @@ Car.prototype.honk = function() {
     return "beep beep";
 }
 
+
 Car.prototype.addPassenger = function(passenger) {
+  console.log("Checking the people", this.passengers);
     this.passengers.push(passenger);
 }
 
@@ -19,11 +21,15 @@ Car.prototype.description = function(make, model) {
 }
 
 Car.prototype.passengerList = function(passengers) {
-  if (this.passengers === null) {
+  if (this.passengers.length === 0) {
     return "no passengers";
-  } else {
+  } else if (this.passengers.length >= 3){
+    return this.passengers.join(", ");
+  }  else {
+    console.log(this.passengers);
     return this.passengers;
   }
+
 }
 
 function ChevyCar(make, model) {
@@ -33,7 +39,6 @@ function ChevyCar(make, model) {
 }
 
 ChevyCar.prototype.breakDown = function() {
-
 }
 
 ChevyCar.prototype.honk = function() {
