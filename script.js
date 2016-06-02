@@ -12,7 +12,6 @@ Car.prototype.honk = function() {
 
 
 Car.prototype.addPassenger = function(passenger) {
-  console.log("Checking the people", this.passengers);
     this.passengers.push(passenger);
 }
 
@@ -20,16 +19,27 @@ Car.prototype.description = function(make, model) {
     return "This is a " + this.make + " " + this.model;
 }
 
-Car.prototype.passengerList = function(passengers) {
-  if (this.passengers.length === 0) {
-    return "no passengers";
-  } else if (this.passengers.length >= 3){
-    return this.passengers.join(", ");
-  }  else {
-    console.log(this.passengers);
-    return this.passengers;
-  }
+Car.prototype.passengerList = function() {
+  var arrValue = this.passengers;
+  var length = arrValue.length;
+  var result = '';
 
+  if (length === 0) {
+    return "no passengers";
+  } else if (length >= 3){
+    for (var i = 0; i < length; i++) {
+      console.log("array index:", i);
+      if ( i === length - 1 ) {
+        result += 'and ' + arrValue[i];
+        console.log('adding and:', result);
+      } else {
+        result += arrValue[i] + ", ";
+      }
+    }
+  }  else {
+    return arrValue.join('');
+  }
+  return result;
 }
 
 function ChevyCar(make, model) {
